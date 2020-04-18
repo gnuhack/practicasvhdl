@@ -1,0 +1,10 @@
+
+./cont_digito.vhd:15:10:error: identifier "cuenta" already used for a declaration
+./cont_digito.vhd:10:10:error: previous declaration: port "cuenta"
+./cont_digito.vhd:19:30:error: port "cuenta" cannot be read
+./cont_digito.vhd:21:17:error: 'cuenta' of mode out can't be in a sensivity list
+./cont_digito.vhd:23:26:error: no function declarations for operator "+"
+./cont_digito.vhd:25:13:error: can't match 'p_cuenta' with type array type "std_logic_vector"
+./cont_digito.vhd:32:17:error: can't match 'p_cuenta' with type array type "std_logic_vector"
+./tb_cont_digito.vhd:40:15:error: actual constraints don't match formal ones
+
