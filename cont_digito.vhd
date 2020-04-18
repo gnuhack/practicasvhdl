@@ -12,24 +12,24 @@ end cont_digito;
 
 architecture Behavioral of cont_digito is
 
-  signal cuenta, p_cuenta: unsigned(3 downto 0);
+  signal salida, p_salida: unsigned(3 downto 0);
 
 begin
 
-  cuenta <= std_logic_vector(cuenta);
+  cuenta <= std_logic_vector(salida);
 
-  comb: process(cuenta)
+  comb: process(salida)
   begin
-      p_cuenta <= cuenta + 1;
+      p_salida <= salida + 1;
   end process;
-  cuenta <= p_cuenta;
+  salida <= p_salida;
 
   sinc: process(rst, clk)
   begin
     if (rst = '1') then
-      cuenta <= "0000";
+      salida <= "0000";
     elsif (rising_edge(clk)) then
-      cuenta <= p_cuenta;
+      salida <= p_salida;
     end if;
   end process;
 

@@ -23,7 +23,7 @@ ARCHITECTURE behavior OF tb_cont_digito IS
   signal enable : std_logic :='0';
   
   --Outputs
-  signal cuenta : std_logic_vector(7 downto 0);
+  signal cuenta : std_logic_vector(3 downto 0);
   signal sat : std_logic := '0';
 
   -- Clock period definitions
@@ -55,6 +55,7 @@ BEGIN
   begin		
     -- hold reset state for 100 ns.
     rst <= '1';
+    
     wait for 100 ns;	
     rst <= '0';
 
