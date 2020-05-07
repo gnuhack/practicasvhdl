@@ -1,0 +1,17 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity control_display is
+  Port( clk : in std_logic;
+        a : out std_logic;
+        b : out std_logic;
+        c : out std_logic;
+        d : out std_logic;
+        e : out std_logic;
+        f : out std_logic;
+        g : out std_logic;
+        dp : out std_logic;
+        can: out std_logic_vector (3 downto 0));
+end control_display;
+
