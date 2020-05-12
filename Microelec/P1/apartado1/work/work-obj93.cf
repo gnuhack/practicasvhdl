@@ -1,7 +1,0 @@
-v 4
-file "/home/carlos/Microelec/P1/apartado1/" "./div.vhd" "b93a3912ae3c39ff48508049d935f46a4c5adf9c" "20200507093930.743":
-  entity div at 1( 0) + 0 on 4;
-  architecture behavioral of div at 13( 273) + 0 on 4;
-file "/home/carlos/Microelec/P1/apartado1/" "./tb_div.vhd" "d79d320d4c6acee9cda8c501cd07afcf58cc6fe7" "20200507093930.743":
-  entity tb_div at 1( 0) + 0 on 4;
-  architecture behavior of tb_div at 7( 74) + 0 on 4;
