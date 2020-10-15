@@ -33,9 +33,9 @@ entity comparador is
       end if;
 
       if (Start_Of_Pulse < To_integer(unsigned(data))  and To_integer(unsigned(data)) < End_Of_Pulse) then
-        p_o2 <='1';
+        p_o2 <='0';--Los valores son inversos
       else
-        p_o2 <='0';
+        p_o2 <='1';
       end if;
 
       if (To_integer(unsigned(data)) = End_Of_Line) then
@@ -49,7 +49,7 @@ entity comparador is
       begin
         if (reset = '1') then
           O1<='0';
-          O2<='0';
+          O2<='1'; --El reset es con el valor activo
           O3<='0';
         elsif (reset = '0') then
           O1 <= p_o1;
