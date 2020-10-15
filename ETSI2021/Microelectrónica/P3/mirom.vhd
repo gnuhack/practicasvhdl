@@ -2,7 +2,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
-use IEEE.numeric_std.all;P
+use IEEE.numeric_std.all;
 use WORK.I8051_LIB.all;
 
 entity mirom is
