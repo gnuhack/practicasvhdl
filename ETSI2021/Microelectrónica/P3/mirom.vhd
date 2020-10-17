@@ -3,7 +3,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 use IEEE.numeric_std.all;
-use WORK.I8051_LIB.all;
+--use WORK.I8051_LIB.all;
 
 entity mirom is
     port(rst      : in  STD_LOGIC;
@@ -183,10 +183,10 @@ begin
     begin
         if( rst = '1' ) then
 
-            data <= 0;
+            data <= "00000000";
         elsif( clk'event and clk = '1' ) then
 
-          data <= PROGRAM(to_integer(addr));
+          data <= PROGRAM(to_integer(unsigned(addr)));
           
             end if;
     end process;

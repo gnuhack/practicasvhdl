@@ -3,7 +3,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 use IEEE.numeric_std.all;
-use WORK.I8051_LIB.all;
+--use WORK.I8051_LIB.all;
 
 entity I8051_ROM is
     port(rst      : in  STD_LOGIC;
@@ -176,7 +176,10 @@ architecture BHV of I8051_ROM is
 	"00000000",
 	"00100010",	-- RET    
 	"00000000",	-- NOP    
-	"00000000");	-- NOP    
+	"00000000");	-- NOP
+
+    constant CD_8     : UNSIGNED ( 7 downto 0) := "--------";
+    
 begin
 
     process(rst, clk)
