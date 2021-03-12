@@ -1,0 +1,1 @@
+/home/carlos/Plantillas/pruebacont/p1/tb_cont_digito.vhd
