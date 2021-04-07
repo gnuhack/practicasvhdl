@@ -121,13 +121,13 @@ begin
   decod : decodificador
     port map(
       binario => s_reg,
-      siete_seg(0) => a,
-      siete_seg(1) => b,
-      siete_seg(2) => c,
+      siete_seg(0) => g,
+      siete_seg(1) => f,
+      siete_seg(2) => e,
       siete_seg(3) => d,
-      siete_seg(4) => e,
-      siete_seg(5) => f,
-      siete_seg(6) => g
+      siete_seg(4) => c,
+      siete_seg(5) => b,
+      siete_seg(6) => a
       );
 
 end Behavioral;
