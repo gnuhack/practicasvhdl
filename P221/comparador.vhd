@@ -45,7 +45,7 @@ entity comparador is
       end if;
 
       end process;
-      sinc : process(reset,p_o1,p_o2,p_o3)
+      sinc : process(reset,clk)
       begin
         if (reset = '1') then
           O1<='0';
