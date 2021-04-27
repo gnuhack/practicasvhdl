@@ -19,11 +19,11 @@ entity comparador is
   end comparador;
 
   architecture Behavioral of comparador is
-    
+
     signal p_o1, p_o2, p_o3 : std_logic;
 
   begin
-    
+
     comb : process (data)
     begin
       if (To_integer(unsigned(data)) > End_Of_Screen)  then
@@ -43,7 +43,7 @@ entity comparador is
       else
         p_o3 <='0';
       end if;
-      
+
       end process;
       sinc : process(reset,p_o1,p_o2,p_o3)
       begin
@@ -51,11 +51,11 @@ entity comparador is
           O1<='0';
           O2<='1'; --El reset es con el valor activo
           O3<='0';
-        elsif (reset = '0') then
+        elsif rising_edge(clk) then
           O1 <= p_o1;
           O2 <= p_o2;
           O3 <= p_o3;
           end if;
         end process;
-          
+
     end Behavioral;
