@@ -19,7 +19,7 @@ begin
 
   Q <= std_logic_vector(salida);
 
-  comb: process(salida,enable)
+  comb: process(salida,enable,resets)
   begin
     p_salida <= salida;
     if (resets = '1') then
@@ -34,7 +34,7 @@ begin
     
   end process;
 
-  sinc: process(resets, clk)
+  sinc: process(reset, clk)
   begin
     if (reset = '1') then
       salida <= (others => '0');
