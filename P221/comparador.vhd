@@ -38,7 +38,7 @@ entity comparador is
         p_o2 <='1';
       end if;
 
-      if (To_integer(unsigned(data)) = End_Of_Line) then
+      if (To_integer(unsigned(data)) > End_Of_Line) then
         p_o3 <='1';
       else
         p_o3 <='0';
