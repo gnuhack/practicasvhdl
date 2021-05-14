@@ -25,7 +25,7 @@ begin
         p_cont <= "0000";
         sat <= '1';
       else
-        p_cont <= cont+1;
+
         sat <= '0';
       end if;
     else
@@ -35,6 +35,7 @@ begin
 
   sinc : process(reset, clk)
   begin
+          p_cont <= cont+1;
     if (reset = '1') then
       cont <= (others => '0');
     --  cuentap <= (others => '0');
